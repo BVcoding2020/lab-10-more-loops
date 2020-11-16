@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		function countDown(start) {
+			console.log(start);
+
+			let nextNumber = start - 1; // let allowas use to use a LOCAL VARIABLE
+
+			if (nextNumber > 0) {
+				countDown(nextNumber); // recusrive funstions call themselves
+			}	else {
+				console.log("HAPPY NEW YEAR!"); // THE BASE CASE
+			}
+
+		}
+
+		countDown(10); // initial call to the function
+
+
+
+
+	</script>
+</body>
+</html>

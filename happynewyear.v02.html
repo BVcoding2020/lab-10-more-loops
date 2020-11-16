@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		function countDown(start) {
+			console.log(start);
+
+			let nextNumber = start - 1; // let allows use to use a LOCAL VARIABLE
+
+			if (nextNumber > 0) {
+			 // countDown(nextNumber);// recusrive functions call themselves
+			 setTimeout(countDown, 1000, nextNumber);
+			  // console.log("HAPPY NEW YEAR!"); // nextNumber is given as argument to the countDown
+			}	else {
+				 // THE BASE CASE
+				setTimeout(function(){console.log("HAPPY NEW YEAR!");}, 1000 , nextNumber);			
+			}
+
+		}
+
+		var count = pasreInt(prompt("How many seconds are left before the ball drops?"));
+		// adding user interactivity (Now we can count down from number user gives)
+		countDown(count); // initial call to the function
+
+
+
+
+	</script>
+</body>
+</html>
